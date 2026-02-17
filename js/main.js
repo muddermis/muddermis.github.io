@@ -29,6 +29,12 @@
   // Apply theme before first paint
   applyTheme(getPreferredTheme());
 
+  // ---------- Random Color Palette ----------
+  (function applyRandomPalette() {
+    var palette = Math.floor(Math.random() * 5) + 1; // 1–5
+    document.documentElement.setAttribute('data-palette', palette);
+  })();
+
   document.addEventListener('DOMContentLoaded', function () {
     // Re-apply to ensure button icon is set
     applyTheme(getPreferredTheme());

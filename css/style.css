@@ -22,6 +22,16 @@
   --color-badge-text: #0071e3;
   --color-footer-bg: #1d1d1f;
   --color-footer-text: #d2d2d7;
+
+  /* Palette colors (overridden by data-palette) */
+  --blob-1: #4FC3F7;
+  --blob-2: #FF8A65;
+  --blob-3: #CE93D8;
+  --blob-4: #81C784;
+  --shape-frzr-circle: #4FC3F7;
+  --shape-frzr-ring: #0277BD;
+  --shape-df-circle: #FFD54F;
+  --shape-df-ring: #E57373;
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
@@ -33,6 +43,43 @@
   --max-width: 1080px;
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
+}
+
+/* ---------- Color Palettes (applied randomly on page load) ---------- */
+
+/* Palette 1 — Ocean (default, also the fallback) */
+[data-palette="1"] {
+  --blob-1: #4FC3F7; --blob-2: #FF8A65; --blob-3: #CE93D8; --blob-4: #81C784;
+  --shape-frzr-circle: #4FC3F7; --shape-frzr-ring: #0277BD;
+  --shape-df-circle: #FFD54F; --shape-df-ring: #E57373;
+}
+
+/* Palette 2 — Sunset */
+[data-palette="2"] {
+  --blob-1: #FF6B6B; --blob-2: #FFA07A; --blob-3: #FFD93D; --blob-4: #C084FC;
+  --shape-frzr-circle: #FF6B6B; --shape-frzr-ring: #C084FC;
+  --shape-df-circle: #FFA07A; --shape-df-ring: #FFD93D;
+}
+
+/* Palette 3 — Forest */
+[data-palette="3"] {
+  --blob-1: #10B981; --blob-2: #6EE7B7; --blob-3: #F59E0B; --blob-4: #34D399;
+  --shape-frzr-circle: #10B981; --shape-frzr-ring: #047857;
+  --shape-df-circle: #F59E0B; --shape-df-ring: #34D399;
+}
+
+/* Palette 4 — Neon */
+[data-palette="4"] {
+  --blob-1: #F472B6; --blob-2: #818CF8; --blob-3: #22D3EE; --blob-4: #A78BFA;
+  --shape-frzr-circle: #818CF8; --shape-frzr-ring: #6366F1;
+  --shape-df-circle: #F472B6; --shape-df-ring: #22D3EE;
+}
+
+/* Palette 5 — Berry */
+[data-palette="5"] {
+  --blob-1: #8B5CF6; --blob-2: #EC4899; --blob-3: #F43F5E; --blob-4: #6366F1;
+  --shape-frzr-circle: #8B5CF6; --shape-frzr-ring: #7C3AED;
+  --shape-df-circle: #EC4899; --shape-df-ring: #F43F5E;
 }
 
 /* ---------- Dark Theme ---------- */
@@ -289,14 +336,14 @@ p {
 
 .blob-1 {
   width: 420px; height: 420px;
-  background: #4FC3F7;
+  background: var(--blob-1);
   top: -10%; left: -5%;
   animation-duration: 20s;
 }
 
 .blob-2 {
   width: 350px; height: 350px;
-  background: #FF8A65;
+  background: var(--blob-2);
   top: 20%; right: -8%;
   animation-duration: 16s;
   animation-delay: -4s;
@@ -304,7 +351,7 @@ p {
 
 .blob-3 {
   width: 300px; height: 300px;
-  background: #CE93D8;
+  background: var(--blob-3);
   bottom: -5%; left: 30%;
   animation-duration: 22s;
   animation-delay: -8s;
@@ -312,7 +359,7 @@ p {
 
 .blob-4 {
   width: 250px; height: 250px;
-  background: #81C784;
+  background: var(--blob-4);
   bottom: 20%; right: 25%;
   animation-duration: 17s;
   animation-delay: -2s;
@@ -417,22 +464,22 @@ p {
 /* FRZR colors */
 .app-showcase--frzr { background: var(--color-bg); }
 .app-showcase--frzr .shape-circle {
-  background: #4FC3F7;
+  background: var(--shape-frzr-circle);
   top: -15%; right: -10%;
 }
 .app-showcase--frzr .shape-ring {
-  border-color: #0277BD;
+  border-color: var(--shape-frzr-ring);
   bottom: -10%; left: -5%;
 }
 
 /* DailyFeels colors */
 .app-showcase--dailyfeels { background: var(--color-bg-secondary); }
 .app-showcase--dailyfeels .shape-circle {
-  background: #FFD54F;
+  background: var(--shape-df-circle);
   bottom: -20%; left: -10%;
 }
 .app-showcase--dailyfeels .shape-ring {
-  border-color: #E57373;
+  border-color: var(--shape-df-ring);
   top: -10%; right: -5%;
 }
 
