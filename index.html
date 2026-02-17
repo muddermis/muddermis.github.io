@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>muddermis — App Developer</title>
-  <meta name="description" content="Apps crafted with care. Explore FRZR, DailyFeels, and more from muddermis.">
-  <meta name="author" content="muddermis">
-  <meta property="og:title" content="muddermis — App Developer">
-  <meta property="og:description" content="Apps crafted with care. Explore FRZR, DailyFeels, and more.">
+  <title>muddermis — Apps</title>
+  <meta name="description" content="FRZR and DailyFeels — simple iOS apps by muddermis.">
+  <meta property="og:title" content="muddermis — Apps">
+  <meta property="og:description" content="FRZR and DailyFeels — simple iOS apps.">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js"></script>
@@ -21,7 +20,6 @@
       <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">☰</button>
       <ul class="nav-links">
         <li><a href="#apps">Apps</a></li>
-        <li><a href="#about">About</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><button class="theme-toggle" aria-label="Toggle theme">🌙</button></li>
       </ul>
@@ -30,133 +28,108 @@
 
   <!-- ========== Hero ========== -->
   <section class="hero">
-    <div class="container">
-      <span class="hero-badge">iOS &amp; Mac Apps</span>
-      <h1>Apps crafted with care</h1>
-      <p>Simple, beautiful, and privacy-focused apps for everyday life. Built with love in Denmark.</p>
+    <div class="hero-bg-shapes" aria-hidden="true">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="blob blob-4"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-icons">
+        <a href="#frzr" class="hero-icon-link">
+          <img src="assets/frzr-icon.png" alt="FRZR" class="hero-app-icon hero-icon-1">
+        </a>
+        <a href="#dailyfeels" class="hero-icon-link">
+          <img src="assets/dailyfeels-icon.png" alt="DailyFeels" class="hero-app-icon hero-icon-2">
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- ========== Apps ========== -->
-  <section id="apps" class="section">
-    <div class="container">
-      <h2 class="text-center" style="margin-bottom: 40px;">Our Apps</h2>
+  <section id="apps">
 
-      <div class="apps-grid">
-
-        <!-- ===== FRZR App Card ===== -->
-        <!--
-          TO ADD A NEW APP: Duplicate this app-card block,
-          update the icon, name, subtitle, description, tags,
-          App Store link, and support link.
-        -->
-        <div class="app-card animate-in">
-          <div class="app-card-header">
-            <img src="assets/frzr-icon.svg" alt="FRZR app icon" class="app-icon">
-            <div class="app-card-header-text">
-              <h3>FRZR</h3>
-              <span class="app-subtitle">Your Freezer Organizer App</span>
-            </div>
-          </div>
-          <p class="app-description">
-            Know exactly what's in your freezer, where it is, and share access with
-            your household — all synced seamlessly across your devices via iCloud.
-          </p>
-          <div class="app-tags">
-            <span class="app-tag">Utilities</span>
-            <span class="app-tag">iCloud Sync</span>
-            <span class="app-tag">Family Sharing</span>
-          </div>
-          <div class="app-card-actions">
+    <!-- FRZR -->
+    <div id="frzr" class="app-showcase app-showcase--frzr">
+      <div class="app-showcase-bg" aria-hidden="true">
+        <div class="shape shape-circle"></div>
+        <div class="shape shape-ring"></div>
+      </div>
+      <div class="container app-showcase-inner">
+        <div class="app-showcase-icon">
+          <img src="assets/frzr-icon.png" alt="FRZR app icon" class="app-icon-large">
+        </div>
+        <div class="app-showcase-info">
+          <h2>FRZR</h2>
+          <p class="app-showcase-tagline">Know your freezer.</p>
+          <div class="app-showcase-actions">
             <a href="https://apps.apple.com/dk/app/frzr/id6751604706" target="_blank" rel="noopener">
               <img src="assets/app-store-badge.svg" alt="Download on the App Store" class="app-store-badge">
             </a>
             <a href="apps/frzr/" class="support-link">Support</a>
           </div>
         </div>
+      </div>
+    </div>
 
-        <!-- ===== DailyFeels App Card ===== -->
-        <div class="app-card animate-in">
-          <div class="app-card-header">
-            <img src="assets/dailyfeels-icon.svg" alt="DailyFeels app icon" class="app-icon">
-            <div class="app-card-header-text">
-              <h3>DailyFeels</h3>
-              <span class="app-subtitle">Your Daily Mood Tracker</span>
-            </div>
-          </div>
-          <p class="app-description">
-            Track your mood effortlessly with just three buttons. See your emotional
-            patterns unfold over days, months, and years with beautiful insights.
-          </p>
-          <div class="app-tags">
-            <span class="app-tag">Health &amp; Fitness</span>
-            <span class="app-tag">iCloud Sync</span>
-            <span class="app-tag">Free</span>
-          </div>
-          <div class="app-card-actions">
+    <!-- DailyFeels -->
+    <div id="dailyfeels" class="app-showcase app-showcase--dailyfeels">
+      <div class="app-showcase-bg" aria-hidden="true">
+        <div class="shape shape-circle"></div>
+        <div class="shape shape-ring"></div>
+      </div>
+      <div class="container app-showcase-inner">
+        <div class="app-showcase-icon">
+          <img src="assets/dailyfeels-icon.png" alt="DailyFeels app icon" class="app-icon-large">
+        </div>
+        <div class="app-showcase-info">
+          <h2>DailyFeels</h2>
+          <p class="app-showcase-tagline">Track how you feel.</p>
+          <div class="app-showcase-actions">
             <a href="https://apps.apple.com/dk/app/dailyfeels/id6758885352" target="_blank" rel="noopener">
               <img src="assets/app-store-badge.svg" alt="Download on the App Store" class="app-store-badge">
             </a>
             <a href="apps/dailyfeels/" class="support-link">Support</a>
           </div>
         </div>
+      </div>
+    </div>
 
-        <!-- ===== Add More Apps Here =====
-        <div class="app-card animate-in">
-          <div class="app-card-header">
-            <img src="assets/NEW-APP-icon.svg" alt="New App icon" class="app-icon">
-            <div class="app-card-header-text">
-              <h3>App Name</h3>
-              <span class="app-subtitle">App Tagline</span>
-            </div>
-          </div>
-          <p class="app-description">
-            Short description of the app.
-          </p>
-          <div class="app-tags">
-            <span class="app-tag">Category</span>
-          </div>
-          <div class="app-card-actions">
+    <!-- ===== Add More Apps Here =====
+    <div id="new-app" class="app-showcase app-showcase--newapp">
+      <div class="app-showcase-bg" aria-hidden="true">
+        <div class="shape shape-circle"></div>
+        <div class="shape shape-ring"></div>
+      </div>
+      <div class="container app-showcase-inner">
+        <div class="app-showcase-icon">
+          <img src="assets/new-app-icon.png" alt="New app icon" class="app-icon-large">
+        </div>
+        <div class="app-showcase-info">
+          <h2>App Name</h2>
+          <p class="app-showcase-tagline">Short tagline.</p>
+          <div class="app-showcase-actions">
             <a href="https://apps.apple.com/..." target="_blank" rel="noopener">
               <img src="assets/app-store-badge.svg" alt="Download on the App Store" class="app-store-badge">
             </a>
             <a href="apps/new-app/" class="support-link">Support</a>
           </div>
         </div>
-        ===== End Template ===== -->
-
       </div>
     </div>
-  </section>
+    ===== End Template ===== -->
 
-  <!-- ========== About ========== -->
-  <section id="about" class="section" style="background: var(--color-bg-secondary);">
-    <div class="container">
-      <div class="about-content">
-        <h2>About</h2>
-        <p>
-          muddermis is an independent app developer based in Denmark, building
-          simple and thoughtful tools that respect your privacy and make everyday
-          life a little easier.
-        </p>
-        <p>
-          Every app is designed to be intuitive, beautiful, and
-          useful — with no tracking, no accounts, and your data always under your control.
-        </p>
-      </div>
-    </div>
   </section>
 
   <!-- ========== Footer ========== -->
   <footer class="footer">
     <div class="container footer-inner">
       <ul class="footer-links">
-        <li><a href="#apps">Apps</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="apps/frzr/privacy.html">FRZR Privacy</a></li>
         <li><a href="apps/dailyfeels/privacy.html">DailyFeels Privacy</a></li>
       </ul>
-      <p class="footer-copy">&copy; 2026 muddermis. All rights reserved.</p>
+      <p class="footer-copy">&copy; 2026 muddermis</p>
     </div>
   </footer>
 

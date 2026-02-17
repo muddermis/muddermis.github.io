@@ -76,21 +76,22 @@
       });
     });
 
-    // ---------- Scroll Animations ----------
+    // ---------- Scroll Reveal ----------
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver(
         function (entries) {
           entries.forEach(function (entry) {
             if (entry.isIntersecting) {
-              entry.target.classList.add('animate-in');
+              entry.target.classList.add('visible');
               observer.unobserve(entry.target);
             }
           });
         },
-        { threshold: 0.1 }
+        { threshold: 0.15 }
       );
 
-      document.querySelectorAll('.app-card, .contact-card').forEach(function (el) {
+      document.querySelectorAll('.app-showcase-inner, .contact-card').forEach(function (el) {
+        el.classList.add('reveal');
         observer.observe(el);
       });
     }
