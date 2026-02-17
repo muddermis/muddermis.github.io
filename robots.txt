@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://muddermis.vercel.app/sitemap.xml
